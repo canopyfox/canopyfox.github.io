@@ -1,0 +1,105 @@
+<!--  TODO Due Sep 2, 2025 11:59 PM 
+- Create a website that has three pages. Each of the pages should have a header, an image and three paragraphs of text in the page.  
+Each of the pages should link to one another using relative links. You can separate your links using a <br> tag.
+- Each of your paragraphs should be styled differently e.g. font, text color etc. 
+- One page should also feature a bulleted list, and a table. 
+Your page with the table should be controlled with an external stylesheet. 
+Submit the link to your webpage in this dropbox.  -->
+
+<!DOCTYPE html> <!-- Declares this as an HTML5 document type for the browser -->
+<html lang="en"> <!-- Root HTML element with English language specification for accessibility -->
+    <head> <!-- Contains metadata and document information that isn't displayed on the page -->
+        <title>Table Page</title> <!-- Sets the page title that appears in browser tab and bookmarks -->
+        
+        <!-- SEO meta tags for better search engine visibility and social media sharing -->
+        <meta name="description" content="This is the table page featuring HTML table examples with semantic structure."> <!-- Brief description for search engines -->
+        <meta name="keywords" content="HTML, CSS, website, tables, semantic"> <!-- Keywords for search engine indexing -->
+        <meta name="author" content="Your Name"> <!-- Specifies the author of the webpage -->
+        
+        <!-- External resource links -->
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico"> <!-- Sets the favicon (tab icon) -->
+        <link rel="stylesheet" href="css/styles.css"> <!-- Links to external CSS stylesheet for styling -->
+    </head>
+    
+    <body> <!-- Contains all visible content of the webpage -->
+        <!-- Background video element that plays automatically, loops, and is muted -->
+        <video autoplay muted loop id="bg-video"> <!-- Video element with autoplay, muted, and loop attributes -->
+            <source src="images/grove-of-the-spirit-tree-maplestory.960x540.mp4" type="video/mp4"> <!-- Video source file with MP4 format specification -->
+        </video>
+        
+        <header> <!-- Semantic header element containing the main page header -->
+            <div class="header-left"> <!-- Left section of the header for left-side image -->
+                <img src="images/maplestory-elsword-emperor.png" alt="Maplestory Elsword Emperor" width="300"> <!-- Left header image with accessibility alt text and fixed width for consistent sizing -->
+            </div>
+            
+            <div id="header-center"> <!-- Center section of the header containing title and navigation -->
+                <h1>HTML Tables</h1> <!-- Main page heading (h1) for the page title -->
+                
+                <nav> <!-- Semantic navigation element containing page links -->
+                    <a href="index.html">Home Page</a> <!-- Link to home page -->
+                    <a href="page2.html">List Page</a> <!-- Link to second page with list content -->
+                    <a href="page3.html" class="active">Table Page</a> <!-- Link to current page (table page) with active class -->
+                </nav>
+            </div>
+            
+            <div id="header-right"> <!-- Right section of the header for right-side image -->
+                <img src="images/maplestory-wizard.png" alt="Maplestory Maves" width="300"> <!-- Right header image with accessibility alt text and fixed width for consistent sizing -->
+            </div>
+        </header>
+
+        <div id="main-content"> <!-- Main content container for the page body -->
+            <img src="images/maplestory-priestess.png" id="priestess-image" alt="Maplestory Icon" width="300"> <!-- Main content image with unique ID for CSS targeting and accessibility alt text -->
+
+            <section> <!-- Semantic section element containing the main text content -->
+                <!-- Each paragraph has unique styles controlled by CSS using ID selectors -->
+                <p id="paragraph-1">HTML tables use semantic elements like &lt;thead&gt;, &lt;tbody&gt;, and &lt;caption&gt; to organize data clearly.</p> <!-- First paragraph with unique ID for styling -->
+                <p id="paragraph-2">Table headers use &lt;th&gt; elements with scope attributes for accessibility, while data uses &lt;td&gt; elements.</p> <!-- Second paragraph with unique ID for styling -->
+                <p id="paragraph-3">Proper table structure helps screen readers and improves SEO by making data relationships clear.</p> <!-- Third paragraph with unique ID for styling -->
+
+                <table> <!-- Main table element -->
+                    <caption>Table Caption</caption> <!-- Table caption -->
+                    
+                    <thead> <!-- Table header section -->
+                        <tr> <!-- Header row -->
+                            <!-- scope="col" means this header applies to ALL cells below it in this column -->
+                            <th scope="col">Header 1</th> <!-- Column header for accessibility -->
+                            <th scope="col">Header 2</th> <!-- Column header for accessibility -->
+                            <th scope="col">Header 3</th> <!-- Column header for accessibility -->
+                            <th scope="col">Header 4</th> <!-- Column header for accessibility -->
+                        </tr>
+                    </thead>
+                    
+                    <tbody> <!-- Table body section -->
+                        <tr> <!-- Data row with rowspan -->
+                            <!-- scope="row" means this header applies to ALL cells to the right of it in this row -->
+                            <!-- rowspan="2" means this cell will span/occupy 2 rows vertically -->
+                            <th scope="row" rowspan="2">Header A</th> <!-- Row header spanning 2 rows -->
+                            <td>Data A1</td> <!-- Data cell in first row -->
+                            <td>Data A2</td> <!-- Data cell in first row -->
+                            <td>Data A3</td> <!-- Data cell in first row -->
+                        </tr>
+                        <tr> <!-- Second row (no first cell due to rowspan above) -->
+                            <!-- This row doesn't need a first cell because the "Group A" header above spans 2 rows -->
+                            <td>Data A4</td> <!-- Data cell in second row -->
+                            <td>Data A5</td> <!-- Data cell in second row -->
+                            <td>Data A6</td> <!-- Data cell in second row -->
+                        </tr>
+                        <tr> <!-- Data row with colspan -->
+                            <th scope="row">Header B</th> <!-- Row header for this row -->
+                            <!-- colspan="2" means this cell will span/occupy 2 columns horizontally -->
+                            <td colspan="2">colspan=2</td> <!-- Data cell spanning 2 columns -->
+                            <td>Data B3</td> <!-- Data cell in third column -->
+                        </tr>
+                    </tbody>
+                    
+                    <tfoot> <!-- Table footer section -->
+                        <tr> <!-- Footer row -->
+                            <!-- colspan="4" means this footer cell spans all 4 columns of the table -->
+                            <td colspan="4">Footer colspan=4</td> <!-- Footer cell spanning all columns -->
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+        </div>
+    </body>
+</html> <!-- Closes the HTML document -->

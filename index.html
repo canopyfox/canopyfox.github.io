@@ -1,0 +1,61 @@
+<!--  TODO Due Sep 2, 2025 11:59 PM 
+- Create a website that has three pages. Each of the pages should have a header, an image and three paragraphs of text in the page.  
+Each of the pages should link to one another using relative links. You can separate your links using a <br> tag.
+- Each of your paragraphs should be styled differently e.g. font, text color etc. 
+- One page should also feature a bulleted list, and a table. 
+Your page with the table should be controlled with an external stylesheet. 
+Submit the link to your webpage in this dropbox.  -->
+
+<!DOCTYPE html> <!-- Declares this as an HTML5 document type for the browser -->
+<html lang="en"> <!-- Root HTML element with English language specification for accessibility -->
+    <head> <!-- Contains metadata and document information that isn't displayed on the page -->
+        <title>Home Page</title> <!-- Sets the page title that appears in browser tab and bookmarks -->
+        
+        <!-- SEO meta tags for better search engine visibility and social media sharing -->
+        <meta name="description" content="This is the home page of my website."> <!-- Brief description for search engines -->
+        <meta name="keywords" content="HTML, CSS, website, home page"> <!-- Keywords for search engine indexing -->
+        <meta name="author" content="Your Name"> <!-- Specifies the author of the webpage -->
+        
+        <!-- External resource links -->
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico"> <!-- Sets the favicon (tab icon) -->
+        <link rel="stylesheet" href="css/styles.css"> <!-- Links to external CSS stylesheet for styling -->
+    </head>
+    
+    <body> <!-- Contains all visible content of the webpage -->
+        <!-- Background video element that plays automatically, loops, and is muted -->
+        <video autoplay muted loop id="bg-video"> <!-- Video element with autoplay, muted, and loop attributes -->
+            <source src="images/grove-of-the-spirit-tree-maplestory.960x540.mp4" type="video/mp4"> <!-- Video source file with MP4 format specification -->
+        </video>
+        
+        <header> <!-- Semantic header element containing the main page header -->
+            <div class="header-left"> <!-- Left section of the header for left-side image -->
+                <img src="images/maplestory-elsword-emperor.png" alt="Maplestory Elsword Emperor" width="300"> <!-- Left header image with accessibility alt text and fixed width for consistent sizing -->
+            </div>
+            
+            <div id="header-center"> <!-- Center section of the header containing title and navigation -->
+                <h1>Welcome Home <img src="images/snail.png" alt="Maplestory Snail" width="40"></h1> <!-- Main page heading (h1) for the page title -->
+                
+                <nav> <!-- Semantic navigation element containing page links -->
+                    <a href="index.html" class="active">Home Page</a> <!-- Link to current page (home) with active class -->
+                    <a href="page2.html">List Page</a> <!-- Link to second page with list content -->
+                    <a href="page3.html">Table Page</a> <!-- Link to third page with table content -->
+                </nav>
+            </div>
+            
+            <div id="header-right"> <!-- Right section of the header for right-side image -->
+                <img src="images/maplestory-wizard.png" alt="Maplestory Maves" width="300"> <!-- Right header image with accessibility alt text and fixed width for consistent sizing -->
+            </div>
+        </header>
+
+        <div id="main-content"> <!-- Main content container for the page body -->
+            <img src="images/maplestory-priestess.png" id="priestess-image" alt="Maplestory Icon" width="300"> <!-- Main content image with unique ID for CSS targeting and accessibility alt text -->
+
+            <section> <!-- Semantic section element containing the main text content -->
+                <!-- Each paragraph has unique styles controlled by CSS using ID selectors -->
+                <p id="paragraph-1">First paragraph with Arial font and blue color.</p> <!-- First paragraph with unique ID for styling -->
+                <p id="paragraph-2">Second paragraph with Times New Roman font and green color.</p> <!-- Second paragraph with unique ID for styling -->
+                <p id="paragraph-3">Third paragraph with Verdana font and red color.</p> <!-- Third paragraph with unique ID for styling -->
+            </section>
+        </div>
+    </body>
+</html> <!-- Closes the HTML document -->
